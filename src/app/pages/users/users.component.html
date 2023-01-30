@@ -1,0 +1,35 @@
+<div class="container mt-3  w-4/5 mx-auto rounded">
+
+    <div class="cuadro ">
+
+        <h1 class="text-star font-bold text-2xl px-4 font-sans  ">Usuarios </h1>
+    </div>
+
+    <div class="tabla mt-4">
+
+        <table class="table">
+            <thead>
+              <tr class="border border-black text-xl text-center">
+                <th class=" bg-slate-900 text-white  font-sans " scope="col">Name</th>
+                <th class="bg-slate-900 text-white  font-sans  " scope="col">UserName</th>
+                <th class="bg-slate-900 text-white  font-sans  " scope="col">Email</th>
+                <th class="bg-slate-900 text-white font-sans  " scope="col">Direccion</th>
+                <th class="bg-slate-900 text-white  font-sans " scope="col">Detalle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let dat of usuarios" class="border border-black font-sans ">
+                <th class=" font-sans" scope="row">{{dat.name }}</th>
+                <td class="text-center  font-sans">{{dat.username }}</td>
+                <td class="text-center px-5">{{dat.email}}</td>
+                <td class="text-center px-5">{{dat.address.street + "/ " + dat.address.suite + "/ " + dat.address.city + "/ " + dat.address.zipcode}}</td>
+                <td class="text-center px-5"><button class="px-8 py-1 m-2 rounded-lg bg-orange-400 text-white  font-sans" (click)="detalles(dat.id)">Ver Detalle</button></td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+    </div>
+
+
+</div>

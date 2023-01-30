@@ -1,0 +1,20 @@
+<div class="flex sm:justify-center space-x-4  bg-slate-900 mx-auto p-3 flex">
+
+    <ul class="flex flex-row w-3/4">
+        <li>
+            <a class="p-5 text-xl font-sans py-5 text-white " routerLinkActive="bg-blue-700 rounded py-1"
+                routerLink="/home"  >Inicio</a>
+        </li>
+        <li>
+            <a class="px-5 text-xl font-sans py-5 text-white " routerLinkActive="bg-blue-700 rounded py-1"
+                routerLink="/users">Usuarios</a>
+        </li>
+    </ul>
+
+    <ul class="flex flex-row-reverse w-1/4">
+        <li >
+            <a class="px-5 text-xl font-sans text-white" [routerLinkActiveOptions]="{exact: true}"
+                routerLinkActive="bg-red-500  font-bold p-5 text-white rounded py-1" routerLink="/">{{nombre}}</a>
+        </li>        
+    </ul>
+</div>
